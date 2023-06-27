@@ -1,8 +1,11 @@
 // Generated using webpack-cli https://github.com/webpack/webpack-cli
 
-// const path = require('path');
-// const HtmlWebpackPlugin = require('html-webpack-plugin');
+import * as path from 'path';
+import * as url from 'url';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+
+// const __filename = url.fileURLToPath(import.meta.url);
+const absdirname = url.fileURLToPath(new URL('.', import.meta.url));
 
 // const isProduction = process.env.NODE_ENV || 'development';
 
@@ -11,8 +14,8 @@ export default {
   mode: process.env.NODE_ENV || 'development',
   entry: './src/index.js',
   output: {
-    // filename: 'bundle.js',
-    // path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js',
+    path: path.resolve(absdirname, 'dist'),
     clean: true,
   },
   devServer: {

@@ -1,5 +1,6 @@
 develop:
 	npx webpack serve
+	Interrupt
 
 install:
 	npm ci
