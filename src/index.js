@@ -1,1 +1,4 @@
-// console.log('Hello, project11');
+import './styles.scss';
+import 'bootstrap';
+
+console.log('Hello, project11');
